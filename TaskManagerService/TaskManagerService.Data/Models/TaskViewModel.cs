@@ -1,12 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Text.Json.Serialization;
-using Newtonsoft.Json.Converters;
-using TaskManagerService.Data.BaseRepository;
+using TaskManagerService.Data.Enitites;
 
-namespace TaskManagerService.Data.Enitites
+namespace TaskManagerService.Data.Models
 {
-    public class Task : IEntity<int>
+    public class TaskViewModel
     {
         public int Id { get; set; }
         public string Code { get; set; }
@@ -16,6 +13,5 @@ namespace TaskManagerService.Data.Enitites
         public State State { get; set; }
         public int? TaskId { get; set; }
         public int? ProjectId { get; set; }
-        public IEnumerable<Task> SubTasks { get; set; }
     }
 }
